@@ -29,8 +29,6 @@ export default async function fetchWeather(
         weather: data.weather[0].main,
         icon: data.weather[0].id,
         temperature: data.main.temp,
-        //  Since we're using the current weather API, we know the API gives us the weather right now and thus can set the date + time ourselves.
-        // TODO: Update to use Intl.DateTimeFormat
         time,
         date,
     }
