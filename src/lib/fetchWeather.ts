@@ -12,7 +12,16 @@ export default async function fetchWeather(
         .then((res) => res.json())
         .catch((err) => console.error(err))
 
-    console.log(data)
+    // Quick date formatting, should be separated into own module in production code.
+    const [date, time] = new Intl.DateTimeFormat('en-GB', {
+        hour: 'numeric',
+        minute: 'numeric',
+        day: 'numeric',
+        hour12: false,
+        month: 'short',
+    })
+        .format(new Date())
+        .split(', ')
 
     return {
         city: data.name,
@@ -22,7 +31,7 @@ export default async function fetchWeather(
         temperature: data.main.temp,
         //  Since we're using the current weather API, we know the API gives us the weather right now and thus can set the date + time ourselves.
         // TODO: Update to use Intl.DateTimeFormat
-        time: '14:26',
-        date: '14 JUN',
+        time,
+        date,
     }
 }

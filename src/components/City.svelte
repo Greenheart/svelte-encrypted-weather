@@ -1,29 +1,39 @@
 <script context="module" lang="ts">
     import type { WeatherForecast } from '../lib/interfaces'
+    import getTemperatureColor from '../lib/getTemperatureColor'
 </script>
 
 <script lang="ts">
     export let forecast: WeatherForecast
+    const color = getTemperatureColor(forecast.temperature)
 </script>
 
-<!-- TODO: Fix colors, spacing and typography to match design -->
-<article class="border-0 rounded-lg shadow-2xl w-64 bg-gray-800 mb-4">
+<!--  NOTE: These colors are not fully accessible, and should be updated in a production app -->
+<article
+    class={`border-0 rounded-lg shadow-2xl w-64`}
+    style="background: {color};"
+>
     <div class="flex justify-between uppercase tabular-nums tracking-wide p-4">
-        <span>{forecast.time}</span>
+        <span class="text-gray-600">{forecast.time}</span>
         <span>{forecast.date}</span>
     </div>
-    <p class="uppercase tabular-nums text-green-400 tracking-wide">
+
+    <span
+        class="text-white justify-center items-center"
+        style="font-size: 6rem;"
+    >
+        <i class={`wi wi-owm-${forecast.icon}`} />
+    </span>
+    <p
+        class="text-center flex items-center justify-center px-8 text-gray-600 text-4xl"
+    >
+        {Math.round(forecast.temperature)}°
+    </p>
+    <p class="uppercase tabular-nums tracking-wide text-gray-600 my-4 text-xl">
         {forecast.weather}
     </p>
-    <p
-        class="h-64 text-xl md:text-2xl text-center flex items-center justify-center px-8"
-    >
-        <!-- TODO: Show relevant weather icon with weather icons: https://svelte-icons.vercel.app/ -->
-        <!-- TODO: Map icons to expected response weather types -->
-        <!-- TODO: Change colors of the weather cards based on weather. Create a Map with pre-defined weather types, and related icons + colors -->
-    </p>
     <div
-        class="flex justify-between uppercase tabular-nums tracking-wide border-t border-t-white p-4"
+        class="flex justify-between uppercase tabular-nums tracking-wide border-t-2 border-t-white p-4"
     >
         <span>{forecast.city}</span>
         <span>{forecast.country}</span>
