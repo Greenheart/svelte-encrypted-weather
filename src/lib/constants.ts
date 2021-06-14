@@ -1,1 +1,1 @@
-export const appName = 'Svelte Encrypted SPA'
+export const appName = 'Svelte Encrypted Weather'

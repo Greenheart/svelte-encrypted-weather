@@ -1,9 +1,9 @@
 import Home from './Home.svelte'
-import Questions from './Questions.svelte'
+import Weather from './Weather.svelte'
 
 const routes = {
     '/': Home,
-    '/questions': Questions,
+    '/weather': Weather,
 }
 
 export default routes

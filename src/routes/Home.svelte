@@ -13,6 +13,6 @@
             {appName}
         </h1>
 
-        <LinkButton href="/questions">Let's start!</LinkButton>
+        <LinkButton href="/weather">Let's start!</LinkButton>
     </div>
 </Layout>
