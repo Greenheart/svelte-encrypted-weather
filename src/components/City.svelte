@@ -10,7 +10,7 @@
 
 <!--  NOTE: These colors are not fully accessible, and should be updated in a production app -->
 <article
-    class={`border-0 rounded-lg shadow-2xl w-64`}
+    class="border-0 rounded-lg shadow-2xl w-64 h-96"
     style="background: {color};"
 >
     <div class="flex justify-between uppercase tabular-nums tracking-wide p-4">
