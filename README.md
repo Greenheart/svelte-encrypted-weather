@@ -15,7 +15,18 @@
 ## Installation
 
 ```
+npx degit Greenheart/svelte-encrypted-weather svelte-encrypted-weather  # Download repo without git history
+cd svelte-encrypted-weather
 npm install
+```
+
+**Important:** This project requires an Open Weather Map API key to work. It takes 2 min to sign up and get a key from your settings on https://home.openweathermap.org/api_keys
+
+Then update the secret in `.env.example` and save the file as `.env` to make sure it loads in the app.
+
+And now you're ready to start the app locally!
+
+```
 npm start
 ```
 
