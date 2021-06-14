@@ -7,6 +7,7 @@
         "start": "vite",
         "build": "vite build",
         "postbuild": "npm run encrypt && rm -rf build/assets",
+        "publish": "npm run build && gh-pages -d build",
         "encrypt": "pagecrypt build/index.html build/index.html -g 61",
         "serve": "vite preview",
         "check": "svelte-check --tsconfig ./tsconfig.json"
@@ -19,6 +20,7 @@
         "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
         "@tsconfig/svelte": "^2.0.1",
         "autoprefixer": "^10.2.6",
+        "gh-pages": "^3.2.0",
         "pagecrypt": "^4.0.1",
         "postcss": "^8.3.3",
         "postcss-load-config": "^3.0.1",
