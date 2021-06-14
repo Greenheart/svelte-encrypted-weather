@@ -6,6 +6,9 @@
 
 <script lang="ts">
     // TODO: Fetch from weather API instead.
+    // TODO: Use API key from secrets.
+    console.log(import.meta.env.VITE_OPEN_WEATHER_MAP_API_KEY)
+
     const forecasts: WeatherForecast[] = [
         {
             city: 'London',
