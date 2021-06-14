@@ -20,6 +20,7 @@
     >
         <!-- TODO: Show relevant weather icon with weather icons: https://svelte-icons.vercel.app/ -->
         <!-- TODO: Map icons to expected response weather types -->
+        <!-- TODO: Change colors of the weather cards based on weather. Create a Map with pre-defined weather types, and related icons + colors -->
     </p>
     <div
         class="flex justify-between uppercase tabular-nums tracking-wide border-t border-t-white p-4"
