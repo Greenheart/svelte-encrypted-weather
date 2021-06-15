@@ -5,11 +5,13 @@
 </script>
 
 <script lang="ts">
+    import { queries } from '../lib/stores'
+
     function fetchForecasts(queries: string[]) {
         return queries.map((query) => fetchWeather(query))
     }
 
-    const forecasts = fetchForecasts(['London,UK', 'Bengaluru,IN'])
+    const forecasts = fetchForecasts($queries)
 
     // Working with cached data during development to reduce unneeded API requests.
     // const forecasts = [

@@ -6,7 +6,9 @@ type Stores = {
     [key: string]: Writable<any> | Readable<any>
 }
 
-let stores: Stores = {}
+let stores: Stores = {
+    queries: allStores.queries,
+}
 
 export function registerStore(
     id: string,

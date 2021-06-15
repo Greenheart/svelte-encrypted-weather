@@ -10,6 +10,8 @@ export default defineConfig({
         }),
         process.env.NODE_ENV === 'production' && viteSingleFile(),
     ],
+    // NOTE: base path doesn't work with vite-plugin-singlefile.
+    // base: '/svelte-encrypted-weather/',
     build: {
         outDir: 'build',
         target: 'es2019',
