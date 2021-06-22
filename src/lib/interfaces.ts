@@ -7,3 +7,5 @@ export interface WeatherForecast {
     date: string
     time: string
 }
+
+export type WeatherForecastError = string
